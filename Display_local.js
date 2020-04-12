@@ -2,7 +2,8 @@ var AWS = require("aws-sdk");
 var readlineSync = require("readline-sync");
 
 AWS.config.update({
-  region: "ap-northeast-1"
+  region: "us-west-2",
+  endpoint: "http://localhost:8000"
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
