@@ -2,19 +2,45 @@
     <script type='text/javascript' charset='utf8' src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
     <script type='text/javascript' charset='utf8' src='Display.js'></script>
 
-    <div id='summery'>
-        <table id='summery_table' border='1'>
-            <tr align='center'>
-                <td>難易度値</td>
-                <td>SS</td>
-                <td>S</td>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>NO PLAY</td>
-            </tr>
-        </table>
-    </div>
-    <div id='detail'>
+    <style>
+        #wrapper{
+            display: flex;
+        }
+        .back_blue{
+            background-color: aliceblue;
+        }
+        .BASIC{
+            color: blue;
+        }
+        .ADVANCED{
+            color: yellow;
+        }
+        .EXTREME{
+            color: red;
+        }
+        .MASTER{
+            color: purple;
+        }
+        #detail{
+            margin-left: 30px;
+        }
+    </style>
+
+    <div id='wrapper'>
+        <div id='summery'>
+            <table id='summery_table'>
+                <tr class='back_blue' align='center'>
+                    <td>難易度値</td>
+                    <td>SS</td>
+                    <td>S</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>NO PLAY</td>
+                </tr>
+            </table>
+        </div>
+        <div id='detail'>
+        </div>
     </div>
 </html>

@@ -2,159 +2,413 @@
     <script type='text/javascript' charset='utf8' src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
     <script>
         var myJSON = [
-        {
-            "title": "10,000,000,000 (CLASSIC)",
-            "difficulty": "BASIC",
-            "diff_val": "4.35"
-        },
-        {
-            "title": "10,000,000,000 (CLASSIC)",
-            "difficulty": "ADVANCED",
-            "diff_val": "5.70"
-        },
-        {
-            "title": "10,000,000,000 (CLASSIC)",
-            "difficulty": "EXTREME",
-            "diff_val": "8.05"
-        },
-        {
-            "title": "0時20分のRoulette",
-            "difficulty": "BASIC",
-            "diff_val": "2.45"
-        },
-        {
-            "title": "0時20分のRoulette",
-            "difficulty": "ADVANCED",
-            "diff_val": "3.70"
-        },
-        {
-            "title": "0時20分のRoulette",
-            "difficulty": "EXTREME",
-            "diff_val": "6.90"
-        },
-        {
-            "title": "XIII",
-            "difficulty": "BASIC",
-            "diff_val": "3.00"
-        },
-        {
-            "title": "XIII",
-            "difficulty": "ADVANCED",
-            "diff_val": "4.80"
-        },
-        {
-            "title": "XIII",
-            "difficulty": "EXTREME",
-            "diff_val": "7.35"
-        },
-        {
-            "title": "XIII",
-            "difficulty": "MASTER",
-            "diff_val": "9.50"
-        },
-        {
-            "title": "１・２・３",
-            "difficulty": "BASIC",
-            "diff_val": "1.60"
-        },
-        {
-            "title": "１・２・３",
-            "difficulty": "ADVANCED",
-            "diff_val": "3.90"
-        },
-        {
-            "title": "１・２・３",
-            "difficulty": "EXTREME",
-            "diff_val": "5.80"
-        },
-        {
-            "title": "１・２・３",
-            "difficulty": "MASTER",
-            "diff_val": "6.90"
-        },
-        {
-            "title": "1/n",
-            "difficulty": "BASIC",
-            "diff_val": "3.30"
-        },
-        {
-            "title": "1/n",
-            "difficulty": "ADVANCED",
-            "diff_val": "5.45"
-        },
-        {
-            "title": "1/n",
-            "difficulty": "EXTREME",
-            "diff_val": "6.95"
-        },
-        {
-            "title": "10,000,000,000",
-            "difficulty": "BASIC",
-            "diff_val": "4.40"
-        },
-        {
-            "title": "10,000,000,000",
-            "difficulty": "ADVANCED",
-            "diff_val": "5.95"
-        },
-        {
-            "title": "10,000,000,000",
-            "difficulty": "EXTREME",
-            "diff_val": "8.45"
-        },
-        {
-            "title": "10,000,000,000",
-            "difficulty": "MASTER",
-            "diff_val": "9.30"
-        },
-        {
-            "title": "1716 SAHARA MOON",
-            "difficulty": "BASIC",
-            "diff_val": "3.65"
-        },
-        {
-            "title": "1716 SAHARA MOON",
-            "difficulty": "ADVANCED",
-            "diff_val": "6.05"
-        },
-        {
-            "title": "1716 SAHARA MOON",
-            "difficulty": "EXTREME",
-            "diff_val": "8.20"
-        },
-        {
-            "title": "1716 SAHARA MOON",
-            "difficulty": "MASTER",
-            "diff_val": "9.30"
-        },
-        {
-            "title": "1816 WIND",
-            "difficulty": "BASIC",
-            "diff_val": "4.75"
-        },
-        {
-            "title": "1816 WIND",
-            "difficulty": "ADVANCED",
-            "diff_val": "6.70"
-        },
-        {
-            "title": "1816 WIND",
-            "difficulty": "EXTREME",
-            "diff_val": "8.00"
-        }
-        ]
-        $.ajax({
-            url:'https://on50hyixaj.execute-api.ap-northeast-1.amazonaws.com/MyStage',
-            type:'POST',
-            headers: {
-                "Content-Type": 'application/json',
-                "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-                "Access-Control-Allow-Methods": "POST",
-                "Access-Control-Allow-Origin": "*"
-            },
-            data:myJSON,
-            success:function(data){ console.log(data);},
-            error:function(e){console.log(e);}
-        });
+  {
+    "title": "0時20分のRoulette",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "0時20分のRoulette",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "0時20分のRoulette",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "0時20分のRoulette",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "１・２・３",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "１・２・３",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "１・２・３",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "１・２・３",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "1/n",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "1/n",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "1/n",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "1/n",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "10,000,000,000",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000 (CLASSIC)",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000 (CLASSIC)",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000 (CLASSIC)",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "10,000,000,000 (CLASSIC)",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "XIII",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "XIII",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "XIII",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "XIII",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "1716 SAHARA MOON",
+    "difficulty": "BASIC",
+    "rank": "SS"
+  },
+  {
+    "title": "1716 SAHARA MOON",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "1716 SAHARA MOON",
+    "difficulty": "EXTREME",
+    "rank": "SS"
+  },
+  {
+    "title": "1716 SAHARA MOON",
+    "difficulty": "MASTER",
+    "rank": "A"
+  },
+  {
+    "title": "1816 WIND",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "1816 WIND",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "1816 WIND",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "1816 WIND",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "23 -twenty three-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "23 -twenty three-",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "23 -twenty three-",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "23 -twenty three-",
+    "difficulty": "MASTER",
+    "rank": "S"
+  },
+  {
+    "title": "3 A.M. ディテクティブ・ゲーム",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "3 A.M. ディテクティブ・ゲーム",
+    "difficulty": "ADVANCED",
+    "rank": "S"
+  },
+  {
+    "title": "3 A.M. ディテクティブ・ゲーム",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "3 A.M. ディテクティブ・ゲーム",
+    "difficulty": "MASTER",
+    "rank": "SS"
+  },
+  {
+    "title": "3dim",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "3dim",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "3dim",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "3dim",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "5-10",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "5-10",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "5-10",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "5-10",
+    "difficulty": "MASTER",
+    "rank": "S"
+  },
+  {
+    "title": "50th Memorial Songs -Beginning Story-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Beginning Story-",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Beginning Story-",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Beginning Story-",
+    "difficulty": "MASTER",
+    "rank": "A"
+  },
+  {
+    "title": "50th Memorial Songs -Flagship medley-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Flagship medley-",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Flagship medley-",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -Flagship medley-",
+    "difficulty": "MASTER",
+    "rank": "S"
+  },
+  {
+    "title": "50th Memorial Songs -二人の時 ～under the cherry blossoms～-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -二人の時 ～under the cherry blossoms～-",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -二人の時 ～under the cherry blossoms～-",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -二人の時 ～under the cherry blossoms～-",
+    "difficulty": "MASTER",
+    "rank": "SS"
+  },
+  {
+    "title": "50th Memorial Songs -The BEMANI History-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -The BEMANI History-",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -The BEMANI History-",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "50th Memorial Songs -The BEMANI History-",
+    "difficulty": "MASTER",
+    "rank": "A"
+  },
+  {
+    "title": "777",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "777",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "777",
+    "difficulty": "EXTREME",
+    "rank": "-"
+  },
+  {
+    "title": "777",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "7th Floor",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "7th Floor",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "7th Floor",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "7th Floor",
+    "difficulty": "MASTER",
+    "rank": "S"
+  },
+  {
+    "title": "8 -eight-",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "8 -eight-",
+    "difficulty": "ADVANCED",
+    "rank": "B"
+  },
+  {
+    "title": "8 -eight-",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "8 -eight-",
+    "difficulty": "MASTER",
+    "rank": "-"
+  },
+  {
+    "title": "800nm",
+    "difficulty": "BASIC",
+    "rank": "-"
+  },
+  {
+    "title": "800nm",
+    "difficulty": "ADVANCED",
+    "rank": "-"
+  },
+  {
+    "title": "800nm",
+    "difficulty": "EXTREME",
+    "rank": "S"
+  },
+  {
+    "title": "800nm",
+    "difficulty": "MASTER",
+    "rank": "-"
+  }
+];
+    $.ajax({
+        url:'https://on50hyixaj.execute-api.ap-northeast-1.amazonaws.com/MyStage',
+        type:'POST',
+        data:JSON.stringify(myJSON),
+        success:function(data){ console.log(data);},
+        error:function(e){console.log(e);}
+    });
     </script>
 </html>

@@ -67,7 +67,9 @@ function main(){
                 if(diff_min % 1 == 0) diff_min = diff_min + '.00';
                 else diff_min = diff_min + '0';
                 diff_max -= 0.01;
-                var ap = '<tr align="right"><td>' + diff_min + ' 〜 ' + diff_max + '</td>';
+                var cl = "";
+                if(idx % 2 == 1) var cl = 'class="back_blue"';
+                var ap = '<tr ' + cl + ' align="right"><td>' + diff_min + ' 〜 ' + diff_max + '</td>';
                 Object.keys(val).forEach(function(key){
                     ap += '<td onclick="showDetail(' + diff_min + ',' + "'" + key + "'" + ')">' + val[key] + '(' + classic[idx][key] + ')</td>';
                 })
@@ -85,10 +87,10 @@ function showDetail(_diff, _rank){
     var i = (_diff - 1) / 0.5;
     var is_matched = false;
     var matched = [];
-    songList[i].forEach(function(val){
+    songList[i].forEach(function(val,idx){
         if(rank_dic[val.rank] > rank_dic[_rank]){
             if(!is_matched){
-                $('#detail').append("<table id='detail_table' border='1'><tr><td>#</td><td>曲名</td><td>難易度</td><td>難易度値</td><td>ランク</td></tr></table>");
+                $('#detail').append("<table id='detail_table'><tr class='back_blue'><td>#</td><td>曲名</td><td>難易度</td><td>難易度値</td><td>ランク</td><td>Youtube</td></tr></table>");
                 is_matched = true;
             }
             var param = {
@@ -105,7 +107,10 @@ function showDetail(_diff, _rank){
     matched.sort(function(a, b){if(rank_dic[a.rank] > rank_dic[b.rank]) return 1; if(rank_dic[a.rank] < rank_dic[b.rank]) return -1; else return 0;});
     matched.forEach(function(val, i){
         var idx = Number(i)+1;
-        var ap = '<tr><td>' + idx + '</td><td>' + val.title + '</td><td>' + val.difficulty + '</td><td>' + val.diff_val +  '</td><td>' + val.rank +  '</td></tr>';
+        var link = 'https://www.youtube.com/results?search_query=gitadora+' + val.title;
+        var cl = "";
+        if(idx % 2 == 0) cl = 'class="back_blue"';
+        var ap = '<tr ' + cl + '><td align="right">' + idx + '</td><td>' + val.title + '</td><td align="center" class="' + val.difficulty + '">' + val.difficulty + '</td><td align="right">' + val.diff_val +  '</td><td align="center">' + val.rank + '</td><td align="center"><a target="_blank" href=' + link + '>動画</a>' + '</td></tr>';
         $('#detail_table').append(ap);
     })
 }
